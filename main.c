@@ -1,7 +1,7 @@
 /** lab02.c
  * ===========================================================
- * Name: First Last
- * Section: xxx
+ * Name: Benjamin Tat
+ * Section: T6
  * Project: Lab 2 - List ADT (w/array)
  * ===========================================================
  */

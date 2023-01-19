@@ -7,11 +7,31 @@ ListADTArray createList() {
 	return L;
 }
 
-int append(ListADTArray *L, int X) {
+int append(ListADTArray *list, int item) {
+	// Ensure there is room to add item
+	if (list->size < MAX){
+		// Add item to end of list
+		list->items[list->size] = item;
+		// Increase size of list
+		list->size++;
+		return 1;
+	}
 	return 0;
 }
 
-int prepend(ListADTArray *L, int X) {
+int prepend(ListADTArray *list, int item) {
+	// Ensure there is room to add item
+	if (list->size < MAX){
+		// Move items down to make space for the prepended item
+		for (int i = list->size; i > 0; i--){
+			list->items[i] = list->items[i-1];
+		}
+		// Add item to front of list
+		list->items[0] = item;
+		// Increase size of list
+		list->size++;
+		return 1;
+	}
 	return 0;
 }
 
